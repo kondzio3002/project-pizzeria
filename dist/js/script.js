@@ -133,7 +133,7 @@
 
       for(let input of thisProduct.formInputs){
         input.addEventListener('change', function(){
-        thisProduct.processOrder();
+          thisProduct.processOrder();
         });
       }
 
@@ -178,7 +178,7 @@
             // check if the option is default
             if(option.default) {
             // reduce price variable
-            price -= option.price;
+              price -= option.price;
             }
           } 
 
@@ -193,6 +193,8 @@
           }    
         }
       }
+      // multiply price by amount
+      price *= thisProduct.amountWidget.value;
 
       // update calculated price in the HTML
       thisProduct.priceElem.innerHTML = price;
@@ -202,6 +204,9 @@
       const thisProduct = this;
 
       thisProduct.amountWidget = new AmountWidget(thisProduct.amountWidgetElem);
+      thisProduct.amountWidgetElem.addEventListener('updated', function(){
+        thisProduct.processOrder();
+      });
     }
   }
 
@@ -248,6 +253,8 @@
       }
 
       thisWidget.input.value = thisWidget.value;
+
+      thisWidget.announce();
     }
 
     initActions(){
@@ -264,6 +271,13 @@
         event.preventDefault();
         thisWidget.setValue(thisWidget.value + 1);
       });
+    }
+
+    announce(){
+      const thisWidget = this;
+
+      const event = new Event('updated');
+      thisWidget.element.dispatchEvent(event);
     }
   }
 
