@@ -140,7 +140,7 @@
       const thisProduct = this;
 
       /* find the clickable trigger (the element that should react to clicking) */
-      //const clickableTrigger =  thisProduct.element.querySelector(select.menuProduct.clickable);
+      // const clickableTrigger =  thisProduct.element.querySelector(select.menuProduct.clickable);
 
       /* START: add event listener to clickable trigger on event click */
       thisProduct.accordionTrigger.addEventListener('click', function(event){
@@ -292,7 +292,7 @@
         // create category param in params const eg. params = { ingredients: { name: 'Ingredients', options: {}}}
         params[paramId] = {
           label: param.label,
-          options: {}
+          options: {},
         };
 
         // for every option in this category
@@ -407,7 +407,7 @@
 
       thisCart.dom = {};
 
-      thisCart.dom.wrapper = element,
+      thisCart.dom.wrapper = element;
       thisCart.dom.toggleTrigger = thisCart.dom.wrapper.querySelector(select.cart.toggleTrigger);
       thisCart.dom.productList = thisCart.dom.wrapper.querySelector(select.cart.productList);
       thisCart.dom.deliveryFee = thisCart.dom.wrapper.querySelector(select.cart.deliveryFee);
@@ -630,20 +630,20 @@
       thisApp.data = {};
       const url = settings.db.url + '/' + settings.db.products;
 
-      fetch(url)
-      .then(function(rawResponse){
-        return rawResponse.json();
-      })
-      .then(function(parsedResponse){
-        console.log('parsedResponse', parsedResponse);
+      fetch(url)     
+        .then(function(rawResponse){
+          return rawResponse.json();
+        })
+        .then(function(parsedResponse){
+          console.log('parsedResponse', parsedResponse);
 
-        /* save parsedResponse as thisApp.data.products */
-        thisApp.data.products = parsedResponse;
+          /* save parsedResponse as thisApp.data.products */
+          thisApp.data.products = parsedResponse;
 
-        /* execute initMenu method */
-        thisApp.initMenu();
-      });
-
+          /* execute initMenu method */
+          thisApp.initMenu();
+        });
+      
       console.log('thisApp.data', JSON.stringify(thisApp.data));
     },
 
