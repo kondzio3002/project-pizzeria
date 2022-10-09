@@ -11,7 +11,7 @@ class Cart{
     thisCart.getElements(element);
     thisCart.initActions();
 
-    console.log('new Cart', thisCart);
+    // console.log('new Cart', thisCart);
   }
 
   getElements(element){
@@ -64,10 +64,10 @@ class Cart{
     /* add element to menu */
     thisCart.dom.productList.appendChild(generatedDOM);
 
-    console.log('adding product', menuProduct);
+    // console.log('adding product', menuProduct);
 
     thisCart.products.push(new CartProduct(menuProduct, generatedDOM));
-    console.log('thisCart.products', thisCart.products);
+    // console.log('thisCart.products', thisCart.products);
 
     thisCart.update();
   }
