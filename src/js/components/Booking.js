@@ -1,5 +1,5 @@
 import {select, templates} from '../settings.js';
-import {utils} from '../utils.js';
+//import {utils} from '../utils.js';
 import AmountWidget from '../components/AmountWidget.js';
 
 class Booking{
@@ -15,33 +15,25 @@ class Booking{
 
     const generatedHTML = templates.bookingWidget();
     
-    thisBooking.dom = {
-        wrapper: element,
-        peopleAmount: element.querySelector(select.booking.peopleAmount),
-        hoursAmount: element.querySelector(select.booking.hoursAmount)
-    };
-
-    thisBooking.dom.wrapper = utils.createDOMFromHTML(generatedHTML);
-
-    const bookingContainer = document.querySelector(select.containerOf.booking);
-
-    bookingContainer.appendChild(thisBooking.dom.wrapper);
+    thisBooking.dom = {};
+    thisBooking.dom.wrapper = element;
+    thisBooking.dom.wrapper.innerHTML = generatedHTML;
+    thisBooking.dom.peopleAmount = thisBooking.dom.wrapper.querySelector(select.booking.peopleAmount);
+    thisBooking.dom.hoursAmount = thisBooking.dom.wrapper.querySelector(select.booking.hoursAmount);
   }
 
   initWidgets(){
     const thisBooking = this;
 
-    thisBooking.peopleAmounElem = new AmountWidget(thisBooking.dom.peopleAmount);
-    thisBooking.hoursAmountElem = new AmountWidget(thisBooking.dom.hoursAmount);
-
+    thisBooking.peopleAmount = new AmountWidget(thisBooking.dom.peopleAmount);
     thisBooking.dom.peopleAmount.addEventListener('updated', function(){
       
     }); 
 
+    thisBooking.hoursAmount = new AmountWidget(thisBooking.dom.hoursAmount);
     thisBooking.dom.hoursAmount.addEventListener('updated', function(){
       
-    });
-    
+    });  
   }
 };
 
