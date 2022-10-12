@@ -1,11 +1,11 @@
 class BaseWidget{
   constructor(wrapperElement, initialValue){
-      const thisWidget = this;
+    const thisWidget = this;
 
-      thisWidget.dom = {};
-      thisWidget.dom.wrapper = wrapperElement;
+    thisWidget.dom = {};
+    thisWidget.dom.wrapper = wrapperElement;
 
-      thisWidget.correctValue = initialValue;
+    thisWidget.correctValue = initialValue;
   }
 
   get value(){

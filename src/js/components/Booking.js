@@ -8,8 +8,8 @@ class Booking{
   constructor(element){
     const thisBooking = this;
 
-      thisBooking.render(element);
-      thisBooking.initWidgets();
+    thisBooking.render(element);
+    thisBooking.initWidgets();
   }
 
   render(element){
@@ -42,6 +42,6 @@ class Booking{
     thisBooking.datePicker = new DatePicker(thisBooking.dom.datePickerInput);
     thisBooking.hourPicker = new HourPicker(thisBooking.dom.hourPickerInput);
   }
-};
+}
 
 export default Booking;
