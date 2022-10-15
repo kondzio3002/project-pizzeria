@@ -1,0 +1,31 @@
+* [33m028a33ab[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m Edit getData Booking.js
+* [33m3a32c16f[m[33m ([m[1;31morigin/main[m[33m)[m Add function getData to Booking.js
+* [33mb16fda39[m Finish class DataPicker and HourPicker
+* [33m1d2e07a5[m Add class DataPicker and HourPicker
+* [33mad89270a[m Add class BaseWidget
+* [33m789b10e6[m End class Booking
+* [33m329c8d5d[m Add class Booking
+* [33mafd59f43[m Edit files
+* [33m18143884[m JS components
+* [33mb304fa1f[m Edit
+* [33m32a4c174[m Add sendOrder js
+* [33mf3b9d09a[m Init API
+* [33me2bbe0d5[m Add Cart.remove and CartProduct.remove js
+* [33m28d82542[m Update AmountWidget.announce and Cart.initActions js
+* [33m7a591587[m Add update for class Cart js
+* [33m7134cc09[m Add add(menuProduct) for class Cart js
+* [33m8afe82b6[m Add prepareCartProduct for class product js
+* [33m85dce6c8[m Add class Cart js
+* [33md8a4f7f8[m Change base files sass/partials, inde.html, js/functions
+* [33m4d3688bb[m Finish class AmountWifget js
+* [33me3070a3b[m Add announce for class AmountWidget js
+* [33m7488488e[m Add gitignore
+* [33mdf9f8328[m Change project folder
+* [33mf6e7991a[m Add class AmountWidget js
+* [33m7b2e08dd[m Add processOrder.optionImage js
+* [33m8959f7c6[m Add processOrder and initOrderForm js
+* [33m94fd3eb8[m Add initAccordion js
+* [33m9a514b01[m Add class Product js
+* [33m6bf37735[m Init project again
+* [33m9902c851[m Init project
+* [33mc4ea7202[m Add base files
